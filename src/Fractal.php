@@ -38,9 +38,9 @@ class Fractal extends Fractalistic
                 $includes = app('request')->query($requestKey);
 
                 if (is_array($includes)) {
-                    $fractal->parseIncludes(explode(',', $includes));
-                } else {
                     $fractal->parseIncludes($includes);
+                } else {
+                    $fractal->parseIncludes(explode(',', $includes));
                 }
             }
         }
